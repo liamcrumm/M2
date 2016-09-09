@@ -36,10 +36,10 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-		List<String> charList = Arrays.asList(input.split(""));
-		Collections.shuffle(charList);
+		List<String> letterList = Arrays.asList(input.split(""));
+		Collections.shuffle(letterList);
 		String randomized = "";
-		for (String letter : charList) {
+		for (String letter : letterList) {
 			randomized += letter;
 		}
 		return randomized;
