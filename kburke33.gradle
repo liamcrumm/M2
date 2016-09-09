@@ -1,0 +1,21 @@
+defaultTasks 'jar'
+
+apply plugin: 'java' // executes Java tasks
+apply plugin: 'application' // makes code runnable
+
+mainClassName = 'src.main.java.edu.gatech.oad.antlab.pkg1.AntLabMain'
+
+dependencies {
+    compile files('lib/resources.jar') // reference to resources.jar
+}
+
+jar {
+    baseName = 'kburke33'
+    version = '0.1.0'
+    manifest {
+        attributes ("Implementation-Title": "Gradle",
+        "Implementation-Version": version,
+        "Main-Class": "edu.gatech.oad.antlab.pkg1.AntLabMain",
+        "Class-Path": "../../lib/resources.jar")
+    }
+}
